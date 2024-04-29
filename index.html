@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <title> Knight Second-Hand Haven</title>
+        <link rel="shortcut icon" href="assets/logo1.jpg" type="image/x-icon">
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /* Header styles */
+        header {
+            background-color: #2ACFCF;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Ensure the header is positioned relative for absolute positioning */
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+            opacity: 0.8;
+            display: flex; /* Enable flexbox layout */
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Distribute items evenly */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        /* Circular container for logo */
+        .logo-container {
+            display: flex; /* Enable flexbox layout */
+            align-items: center; /* Align items vertically */
+        }
+
+        /* Logo image styles */
+        .logo-container img {
+            width: 100px; /* Adjust the size of the logo image */
+            height: auto;
+            margin-right: 10px; /* Add spacing between the logo and text */
+        }
+
+        /* Logo text styles */
+        .logo-container h1 {
+            margin: 0;
+            font-size: 20px; /* Adjust the font size of the logo text */
+            color: white;
+        }
+
+        /* Content section styles */
+        .content {
+            background-color:whitesmoke;
+            color: black;
+            padding: 8px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .content h2 {
+            color: #E53935;
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Slide animation */
+        .slide {
+            animation: slide 2s ease infinite alternate;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* About Us section styles */
+        .about-us {
+            background-color: whitesmoke;
+            color:black;
+            padding: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .about-us-description {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-us img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Testimonials section styles */
+        .testimonials {
+            background-color: white; /* Darker background color */
+            color: black;
+            padding: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around; /* Display testimonials side by side */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .testimonial {
+            width: 100%; /* Adjust width of testimonials on larger screens */
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-style: italic;
+        }
+
+        /* Button styles */
+        .btn-get-started {
+            background-color: #2ACFCF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-get-started:hover {
+            background-color: #1D9FA3;
+        }
+
+        /* Additional styling for demonstration */
+
+        /* Hide the images by default */
+        .mySlides1 {
+            display: none;
+        }
+
+        /* Caption text */
+        .text {
+            color: black;
+            background-color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Add this CSS to create the zigzag effect */
+        .zigzag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .zigzag-item {
+            width: calc(50% - 10px); /* Adjust the width as needed */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .zigzag-item:nth-child(odd) {
+            transform: translateY(15px); /* Move odd items down */
+        }
+
+        .zigzag-item:nth-child(even) {
+            transform: translateY(-15px); /* Move even items up */
+        }
+
+        .zigzag-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .zigzag-description {
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .about-us {
+                padding: 20px;
+            }
+            .about-us img {
+                width: 100%;
+            }
+            .zigzag-item {
+                width: 100%;
+            }
+        }
+        .brand-name {
+            background-color: orange;
+            padding: 10px; /* Add padding for better appearance */
+            color: white; /* Set text color to white for better contrast */
+            text-align: center; /* Center align text */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+   
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                
+                    
+                    <h2 class="brand-before">
+                       
+                    </h2>
+                    <h1 class="brand-name"> Knight Second-Hand Haven<br>
+                    
+                     Get More, Spend Less  </h1>
+                    <hr class="tagline-divider">
+                   
+                    <h2>
+                        <small>
+                            <strong><div class="about-us">
+                                 <img class="img-responsive img-full" src="assets/logo1.jpg" alt="Knight saver Logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+
+ 
+                    <div class="about-us-description">
+                        <h2>Why settle for new when you can embrace the charm of pre-loved treasures?</h2>
+                         
+                       
+                        <a href="shop.php" class="btn btn-get-started ">Shop Now</a>
+                    </div>
+                    
+                </div></strong>
+                        </small>
+                    </h2>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        Second Hand Shop
+                    </h2>
+                    <hr>
+                    <hr class="visible-xs">
+                    
+                    
+                    <p><div class="zigzag-container">
+                    <div class="zigzag-item">
+                        <div class="zigzag-description">
+                            <h3>Getting Started</h3>
+                            <p>Transform your unwanted treasures into cash with Knight Second-Hand Haven.</p>
+                        </div>
+                        <img src="assets/sell.jpeg" alt="Sell Item 1" class="zigzag-img">
+                    </div>
+                        
+                        <div class="zigzag-item">
+                        <img src="assets/seller.jpeg" alt="Sell Item 2" class="zigzag-img">
+                        <div class="zigzag-description">
+                            <h3>Start Making Money</h3>
+                            <p>Sell your pre-loved items effortlessly with Knight Second-Hand Haven.</p>
+                            <a href="sell.php" class="btn btn-get-started">Start Selling</a>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+    <div class="row">
+            <div class="box">
+      <!-- Testimonials content here -->
+        <div class="testimonials">
+        <div class="testimonial">
+             <hr>
+        <h2><b>Testimonials</b></h2>
+         <hr>
+            <p>"Knight Second-Hand Haven revolutionized my shopping experience. The range of second-hand items available is impressive, and the prices are unbeatable. I've found unique treasures here that I couldn't find anywhere else."</p><br>
+            <p class="testimonial-author"><b>Mitchell Muraya</b><br> Fashion Enthusiast</p>
+        </div>
+        <div class="testimonial">
+            <p>"I've been a loyal customer of Knight Second-Hand Haven for years now. Not only do they offer great deals on second-hand goods, but their commitment to sustainability aligns with my values. It feels good to shop consciously and support local businesses.".</p><br>
+            <p class="testimonial-author"><b>Zack Smith</b><br>Environmental Advocate</p>
+        </div>
+        <div class="testimonial">
+            <p>"Knight Second-Hand Haven is my go-to destination for affordable, high-quality second-hand items. Whether I'm looking for clothing, electronics, or home decor, I always find something interesting. The ease of browsing and the variety of products keep me coming back for more."</p><br>
+            <p class="testimonial-author"><b>Eric Njuguna</b><br>Thrifty Shopper</p>
+        </div>
+        </div>
+        </div>
+         </div>
+          </div>
+        
+        
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    
+                    <hr>
+                    <h2 class="intro-text text-center">Contact
+                        <strong>Knight Second-Hand Haven</strong>
+                    </h2>
+                    <hr>
+                    
+                </div>
+                
+                
+                <div class="col-lg-12">
+                    
+                    <p>
+                        Address: <strong>Githunguri,Kiambu
+</strong>
+                    </p>
+                    
+
+                    
+                    <p>
+                        
+                            Phone: <strong>0115 812700</strong> <br/>
+                        
+
+                        
+
+                         
+
+                        
+                            Business Hours: <strong>24/7 services</strong><br/>
+                        
+                      <strong><a href="mailto:knightsavermall%40gmail.com">knightsavermall@gmail.com</a></strong> <br/>
+                       
+                        
+                            
+                        
+                    </p>
+                    
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    
+
+     
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    
+                    
+                    <div class="copyright">Copyright &copy; Knight Second-Hand Haven 2024</div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    
+
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+
+      
+      "name" : "Knight Second-Hand Haven",
+      
+
+      
+      "url" : "\/\/knight.businesscareerconsulting.co.ke",
+      
+
+      
+
+      
+      "contactPoint" : [{
+        "@type" : "ContactPoint",
+        "telephone" : "0714487081",
+        "contactType" : "customer service"
+      }]
+      
+    }
+</script>
+
+</body>
+
+</html>
