@@ -131,6 +131,7 @@
 
         /* About Us section styles */
         .about-us {
+       
             background-color: whitesmoke;
             color:black;
             padding: 50px;
@@ -267,6 +268,35 @@
             height: auto;
             display: block;
         }
+        .item-container {
+    display: flex;
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-content {
+    text-align: center;
+}
+
+.item-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.item-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.item-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 
         .zigzag-description {
             padding: 15px;
@@ -295,7 +325,7 @@
 
 <body>
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
 
     <div class="container">
@@ -314,16 +344,17 @@
                     <hr class="tagline-divider">
                    
                     <h2>
+                    
                         <small>
                             <strong><div class="about-us">
                                  <img class="img-responsive img-full" src="assets/logo1.jpg" alt="Knight saver Logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
 
  
                     <div class="about-us-description">
-                        <h2>Why settle for new when you can embrace the charm of pre-loved treasures?</h2>
-                         
-                       
-                        <a href="shop.php" class="btn btn-get-started ">Shop Now</a>
+                        <h2>Welcome to Knight Second-Hand Haven</h2>
+                        <p>Where every item tells a story. Discover unique treasures and embrace the charm of pre-loved goods.</p>
+                        
+                      
                     </div>
                     
                 </div></strong>
@@ -350,8 +381,12 @@
                     <p><div class="zigzag-container">
                     <div class="zigzag-item">
                         <div class="zigzag-description">
-                            <h3>Getting Started</h3>
-                            <p>Transform your unwanted treasures into cash with Knight Second-Hand Haven.</p>
+                            <h1>Getting Started</h1>
+                           
+                            <p>Why settle for new when you can embrace the charm of pre-loved treasures?</p>
+                         
+                       
+                            <a href="shop.php" class="btn btn-get-started ">Shop Now</a>
                         </div>
                         <img src="assets/sell.jpeg" alt="Sell Item 1" class="zigzag-img">
                     </div>
@@ -359,7 +394,7 @@
                         <div class="zigzag-item">
                         <img src="assets/seller.jpeg" alt="Sell Item 2" class="zigzag-img">
                         <div class="zigzag-description">
-                            <h3>Start Making Money</h3>
+                            <h1>Start Making Money</h1>
                             <p>Sell your pre-loved items effortlessly with Knight Second-Hand Haven.</p>
                             <a href="sell.php" class="btn btn-get-started">Start Selling</a>
                         </div>
@@ -368,8 +403,8 @@
             </div>
         </div>
         
-
         
+
 
     <div class="row">
             <div class="box">
